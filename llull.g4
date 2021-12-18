@@ -2,7 +2,7 @@ grammar llull;
 
 root: program EOF;
 
-program: ass | expr;
+program: (ass | expr | write)*;
 
 ass: CAR IG expr;
 
@@ -16,7 +16,7 @@ expr:
 	| expr MES expr
 	| INT;
 
-CAR: [a-z]+;
+CAR: [a-z];
 INT: [0-9]+;
 
 MES: '+';

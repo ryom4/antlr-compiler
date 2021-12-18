@@ -12,14 +12,14 @@ class EvalVisitor(llullVisitor):
 
     def visitRoot(self, ctx):
         l = list(ctx.getChildren())
-        print(self.visit(l[0]))
+        self.visit(l[0])
 
     def visitExpr(self, ctx):
         l = list(ctx.getChildren())
         if len(l) == 1:
             return int(l[0].getText())
         else:  # len(l) == 3
-            if (l[1].getText() == '^'):
+            if (l[1].getText() == '**'):
                 return self.visit(l[0]) ** self.visit(l[2])
             elif (l[1].getText() == '/'):
                 return self.visit(l[0]) / self.visit(l[2])
@@ -32,11 +32,8 @@ class EvalVisitor(llullVisitor):
 
     def visitWrite(self, ctx):
         l = list(ctx.getChildren())
-        print(self.mem[self.visit(l[1])])
+        print(self.mem[l[1].getText()])
 
     def visitAss(self, ctx):
         l = list(ctx.getChildren())
-        print(l[0].getText())
-        print(l[2].getText())
-
         self.mem[l[0].getText()] = self.visit(l[2])
