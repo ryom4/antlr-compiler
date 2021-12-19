@@ -1,3 +1,10 @@
-x := 4 ** 4
-y := 4
-write x
+void proc() {
+    y = 3
+    write(y)
+}
+
+void main() {
+    x = 4 * 4
+    proc()
+    write(x) 
+}

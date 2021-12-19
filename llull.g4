@@ -2,29 +2,39 @@ grammar llull;
 
 root: program EOF;
 
-program: (ass | expr | write)*;
+program: (proc)+;
 
-ass: CAR IG expr;
+procCall: PROCNAME LP RP;
+proc: 'void' PROCNAME LP (VAR ',' (VAR)*)? RP LB statements RB; 
+statements: (write | expr | ass | procCall)*;
 
-write: WR CAR;
+ass: VAR IG expr;
+
+write: WR LP VAR RP;
 
 expr:
-	<assoc = right> expr POT expr
-	| expr DIV expr
-	| expr MUL expr
-	| expr RES expr
-	| expr MES expr
-	| INT;
+    expr DIV expr
+    | expr MUL expr
+    | expr RES expr
+    | expr MES expr
+    | INT;
 
-CAR: [a-z];
 INT: [0-9]+;
-
+VAR: [a-z];
 MES: '+';
 RES: '-';
 MUL: '*';
 DIV: '/';
 POT: '**';
 
-IG: ':=';
+LP: '(';
+RP: ')';
+LB: '{';
+RB: '}';
+
 WR: 'write';
-WS: [ \n]+ -> skip;
+PROCNAME: VAR+;
+
+
+IG: '=';
+WS: [ \n\r]+ -> skip;

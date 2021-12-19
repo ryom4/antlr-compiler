@@ -5,10 +5,12 @@ else:
     from llullParser import llullParser
     from llullVisitor import llullVisitor
 
+    
 
 class EvalVisitor(llullVisitor):
     def __init__(self):
         self.mem = {}
+        self.processes = {}
 
     def visitRoot(self, ctx):
         l = list(ctx.getChildren())
@@ -19,9 +21,7 @@ class EvalVisitor(llullVisitor):
         if len(l) == 1:
             return int(l[0].getText())
         else:  # len(l) == 3
-            if (l[1].getText() == '**'):
-                return self.visit(l[0]) ** self.visit(l[2])
-            elif (l[1].getText() == '/'):
+            if (l[1].getText() == '/'):
                 return self.visit(l[0]) / self.visit(l[2])
             elif (l[1].getText() == '*'):
                 return self.visit(l[0]) * self.visit(l[2])
@@ -30,9 +30,22 @@ class EvalVisitor(llullVisitor):
             elif (l[1].getText() == '+'):
                 return self.visit(l[0]) + self.visit(l[2])
 
+    def visitProcCall(self, ctx):
+        procname = ctx.PROCNAME().getText()
+        self.visit(self.processes[procname])
+
+    def visitProc(self, ctx):
+        procname = ctx.PROCNAME().getText()
+        statements = ctx.statements()
+
+        if procname == "main":
+            self.visit(statements)
+        else:
+            self.processes[procname] = statements
+
     def visitWrite(self, ctx):
         l = list(ctx.getChildren())
-        print(self.mem[l[1].getText()])
+        print(self.mem[l[2].getText()])
 
     def visitAss(self, ctx):
         l = list(ctx.getChildren())
