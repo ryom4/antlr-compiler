@@ -4,9 +4,12 @@ root: program EOF;
 
 program: (proc)+;
 
-procCall: PROCNAME LP RP;
-proc: 'void' PROCNAME LP (VAR ',' (VAR)*)? RP LB statements RB; 
+procCall: PROCNAME LP parameters RP;
+parameters: (INT | VAR)? (',' (INT | VAR))*; 
+
+proc: 'void' PROCNAME LP (VAR (',' VAR)*)? RP LB statements RB; 
 statements: (write | expr | ass | procCall)*;
+
 
 ass: VAR IG expr;
 
@@ -25,7 +28,6 @@ MES: '+';
 RES: '-';
 MUL: '*';
 DIV: '/';
-POT: '**';
 
 LP: '(';
 RP: ')';

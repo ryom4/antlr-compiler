@@ -1,10 +1,10 @@
-void proc() {
-    y = 3
-    write(y)
+void proc(z, x) {
+    write(z)
+    write(x)
 }
 
 void main() {
     x = 4 * 4
-    proc()
-    write(x) 
+    y = 2
+    proc(5, x)
 }
