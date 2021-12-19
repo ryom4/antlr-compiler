@@ -5,7 +5,6 @@ else:
     from llullParser import llullParser
     from llullVisitor import llullVisitor
 
-    
 
 class EvalVisitor(llullVisitor):
     def __init__(self):
@@ -37,7 +36,7 @@ class EvalVisitor(llullVisitor):
     def visitProc(self, ctx):
         procname = ctx.PROCNAME().getText()
         statements = ctx.statements()
-
+ 
         if procname == "main":
             self.visit(statements)
         else:
