@@ -28,7 +28,7 @@ class EvalVisitor(llullVisitor):
                 return self.visit(l[0]) - self.visit(l[2])
             elif (l[1].getText() == '+'):
                 return self.visit(l[0]) + self.visit(l[2])
-
+ 
     def visitProcCall(self, ctx):
         procname = ctx.PROCNAME().getText()
         self.visit(self.processes[procname])
