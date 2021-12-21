@@ -44,6 +44,11 @@ class llullVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by llullParser#read.
+    def visitRead(self, ctx:llullParser.ReadContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by llullParser#ass.
     def visitAss(self, ctx:llullParser.AssContext):
         return self.visitChildren(ctx)

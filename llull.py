@@ -3,6 +3,7 @@ from antlr4 import *
 from llullLexer import llullLexer
 from llullParser import llullParser
 from EvalVisitor import EvalVisitor
+from SymbolsVisitor import SymbolsVisitor
 
 input_stream = FileStream(sys.argv[1])
 #input_stream = InputStream(input('? '))
@@ -11,5 +12,8 @@ token_stream = CommonTokenStream(lexer)
 parser = llullParser(token_stream)
 tree = parser.root()
 
-visitor = EvalVisitor()
+symbolsVisitor = SymbolsVisitor()
+symbols = symbolsVisitor.visit(tree)
+
+visitor = EvalVisitor(symbols)
 visitor.visit(tree)

@@ -8,12 +8,13 @@ program: (proc)+;
 proc: VOID ID LP (ID (',' ID)*)? RP LB statements RB; 
 
 
-statements: (write | expr | ass | procCall | conditional | loop | forloop | array | setArray)+;
+statements: (write | expr | ass | procCall | conditional | loop | forloop | array | setArray | read)+;
 
 procCall: ID LP parameters RP;
 parameters: (expr (',' expr)*)?;
 
 write: WR LP expr (',' expr)* RP;
+read: READ LP ID RP;
 
 ass: ID IG expr;
 array: ARRAY LP ID ',' expr RP;
@@ -46,6 +47,7 @@ expr:
     | INT            #int      
     ;
 
+READ: 'read';
 SET: 'set';
 GET: 'get';
 ARRAY: 'array';
@@ -57,7 +59,7 @@ WR: 'write';
 VOID: 'void';
 
 INT: [0-9]+;
-ID: [a-z]+;
+ID: [a-zA-Z]+;
 
 MES: '+';
 RES: '-';

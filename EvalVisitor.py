@@ -13,9 +13,9 @@ class SaveProcess():
 
 
 class EvalVisitor(llullVisitor):
-    def __init__(self):
+    def __init__(self, symbols):
         self.mem = [{}]
-        self.processes = {}
+        self.processes = symbols
 
     def visitRoot(self, ctx):
         l = list(ctx.getChildren())
@@ -102,13 +102,15 @@ class EvalVisitor(llullVisitor):
         params = list(ctx.parameters().getText())
         newmem = {}
         i = 0
-        for param in list(self.processes[procname].parameters):
-            if params[i] != ',':
-                if not params[i].isnumeric():
-                    newmem[param] = self.mem[-1][params[i]]
-                else:
-                    newmem[param] = params[i]
-            i += 1
+
+        if len(params) != 0:
+            for param in list(self.processes[procname].parameters):
+                if params[i] != ',':
+                    if not params[i].isnumeric():
+                        newmem[param] = self.mem[-1][params[i]]
+                    else:
+                        newmem[param] = params[i]
+                i += 1
 
         self.mem.append(newmem)
 
@@ -138,6 +140,10 @@ class EvalVisitor(llullVisitor):
         while i < len(l):
             print(self.visit(l[i]))
             i += 2
+
+    def visitRead(self, ctx):
+        l = list(ctx.getChildren())
+        self.mem[-1][l[2].getText()] = int(input())
 
     def visitAss(self, ctx):
         l = list(ctx.getChildren())
