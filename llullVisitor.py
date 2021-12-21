@@ -19,16 +19,6 @@ class llullVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by llullParser#procCall.
-    def visitProcCall(self, ctx:llullParser.ProcCallContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by llullParser#parameters.
-    def visitParameters(self, ctx:llullParser.ParametersContext):
-        return self.visitChildren(ctx)
-
-
     # Visit a parse tree produced by llullParser#proc.
     def visitProc(self, ctx:llullParser.ProcContext):
         return self.visitChildren(ctx)
@@ -39,13 +29,48 @@ class llullVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by llullParser#ass.
-    def visitAss(self, ctx:llullParser.AssContext):
+    # Visit a parse tree produced by llullParser#procCall.
+    def visitProcCall(self, ctx:llullParser.ProcCallContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by llullParser#parameters.
+    def visitParameters(self, ctx:llullParser.ParametersContext):
         return self.visitChildren(ctx)
 
 
     # Visit a parse tree produced by llullParser#write.
     def visitWrite(self, ctx:llullParser.WriteContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by llullParser#ass.
+    def visitAss(self, ctx:llullParser.AssContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by llullParser#conditional.
+    def visitConditional(self, ctx:llullParser.ConditionalContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by llullParser#elseConditional.
+    def visitElseConditional(self, ctx:llullParser.ElseConditionalContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by llullParser#loop.
+    def visitLoop(self, ctx:llullParser.LoopContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by llullParser#forloop.
+    def visitForloop(self, ctx:llullParser.ForloopContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by llullParser#cond.
+    def visitCond(self, ctx:llullParser.CondContext):
         return self.visitChildren(ctx)
 
 

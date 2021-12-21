@@ -1,5 +1,5 @@
-void proc(z, x) {
-    write(z)
+void proc(zy, x) {
+    write(zy)
     write(x)
 }
 
@@ -7,4 +7,6 @@ void main() {
     x = 4 * 4
     y = 2
     proc(5, x)
+    write(42)
+    write("a b c ")
 }
