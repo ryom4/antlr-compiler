@@ -8,15 +8,16 @@ program: (proc)+;
 proc: VOID ID LP (ID (',' ID)*)? RP LB statements RB; 
 
 
-statements: (write | expr | ass | procCall | conditional | loop | forloop)+;
+statements: (write | expr | ass | procCall | conditional | loop | forloop | array | setArray)+;
 
 procCall: ID LP parameters RP;
-
 parameters: (expr (',' expr)*)?;
 
 write: WR LP expr (',' expr)* RP;
 
 ass: ID IG expr;
+array: ARRAY LP ID ',' expr RP;
+setArray: SET LP ID ',' expr ',' expr RP;
 
 conditional: IF LP cond RP LB statements RB (elseConditional)?;
 elseConditional: ELSE LB statements RB;
@@ -35,14 +36,19 @@ cond:
 
 
 expr:
-    expr DIV expr   
-    | expr MUL expr 
-    | expr RES expr 
-    | expr MES expr 
-    | ID   
-    | STRING
-    | INT;          
+    expr DIV expr    #div
+    | expr MUL expr  #mul 
+    | expr RES expr  #res 
+    | expr MES expr  #mes 
+    | ID             #var 
+    | STRING         #string
+    | GET LP ID ',' expr RP #get
+    | INT            #int      
+    ;
 
+SET: 'set';
+GET: 'get';
+ARRAY: 'array';
 FOR: 'for';
 WHILE: 'while';
 ELSE: 'else';

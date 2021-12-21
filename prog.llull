@@ -1,12 +1,15 @@
-void proc(zy, x) {
-    write(zy)
-    write(x)
+void proc(p, x) {
+    for(i = 0; i < 5; i = i + 1) {
+        set(p, i, i)
+        write(get(p, i))
+    }
 }
 
 void main() {
-    x = 4 * 4
-    y = 2
-    proc(5, x)
-    write(42)
-    write("a b c ")
+    a = 5 + 4
+    write(a)
+    array(p, 5)
+    set(p, 2, 44)
+    proc(p, 4)
+
 }

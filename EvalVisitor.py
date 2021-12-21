@@ -21,26 +21,40 @@ class EvalVisitor(llullVisitor):
         l = list(ctx.getChildren())
         self.visit(l[0])
 
-    def visitExpr(self, ctx):
+    def visitInt(self, ctx):
         l = list(ctx.getChildren())
-        if len(l) == 1 and l[0].getSymbol().type == llullParser.ID:
-            return self.mem[-1][l[0].getText()]
-        elif len(l) == 1 and l[0].getSymbol().type == llullParser.STRING:
-            s = l[0].getText()
-            return s[1:-1]
-        elif len(l) == 1:
-            return int(l[0].getText())
-        else:
-            if (l[1].getText() == '/'):
-                return self.visit(l[0]) / self.visit(l[2])
-            elif (l[1].getText() == '*'):
-                return self.visit(l[0]) * self.visit(l[2])
-            elif (l[1].getText() == '-'):
-                return self.visit(l[0]) - self.visit(l[2])
-            elif (l[1].getText() == '+'):
-                return self.visit(l[0]) + self.visit(l[2])
-            else:
-                return self.mem[-1][l[0].getText()]
+        return int(l[0].getText())
+
+    def visitMes(self, ctx):
+        l = list(ctx.getChildren())
+        return self.visit(l[0]) + self.visit(l[2])
+
+    def visitRes(self, ctx):
+        l = list(ctx.getChildren())
+        return self.visit(l[0]) - self.visit(l[2])
+
+    def visitMul(self, ctx):
+        l = list(ctx.getChildren())
+        return self.visit(l[0]) * self.visit(l[2])
+
+    def visitDiv(self, ctx):
+        l = list(ctx.getChildren())
+        return self.visit(l[0]) / self.visit(l[2])
+
+    def visitVar(self, ctx):
+        l = list(ctx.getChildren())
+        return self.mem[-1][l[0].getText()]
+
+    def visitString(self, ctx):
+        l = list(ctx.getChildren())
+        s = l[0].getText()
+        return s[1:-1]
+
+    def visitGet(self, ctx):
+        l = list(ctx.getChildren())
+        name = l[2].getText()
+        value = self.visit(l[4])
+        return self.mem[-1][name][value]
 
     def visitCond(self, ctx):
         l = list(ctx.getChildren())
@@ -67,7 +81,7 @@ class EvalVisitor(llullVisitor):
         if cond:
             self.visit(statements)
         elif len(l) == 8:
-            self.visit(l[7]) 
+            self.visit(l[7])
 
     def visitLoop(self, ctx):
         l = list(ctx.getChildren())
@@ -76,12 +90,11 @@ class EvalVisitor(llullVisitor):
 
     def visitForloop(self, ctx):
         l = list(ctx.getChildren())
-        self.visit(l[2]) #statement1
+        self.visit(l[2])  # statement1
 
         while self.visit(l[4]):
             self.visit(l[9])
-            self.visit(l[6]) #statement2
-
+            self.visit(l[6])  # statement2
 
     def visitProcCall(self, ctx):
         l = list(ctx.getChildren())
@@ -129,3 +142,17 @@ class EvalVisitor(llullVisitor):
     def visitAss(self, ctx):
         l = list(ctx.getChildren())
         self.mem[-1][l[0].getText()] = self.visit(l[2])
+
+    def visitArray(self, ctx):
+        l = list(ctx.getChildren())
+        name = l[2].getText()
+        size = self.visit(l[4])
+        self.mem[-1][name] = [0] * size
+
+    def visitSetArray(self, ctx):
+        l = list(ctx.getChildren())
+        name = l[2].getText()
+        it = self.visit(l[4])
+        value = self.visit(l[6])
+
+        self.mem[-1][name][it] = value
