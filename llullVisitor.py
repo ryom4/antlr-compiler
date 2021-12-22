@@ -14,11 +14,6 @@ class llullVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by llullParser#program.
-    def visitProgram(self, ctx:llullParser.ProgramContext):
-        return self.visitChildren(ctx)
-
-
     # Visit a parse tree produced by llullParser#proc.
     def visitProc(self, ctx:llullParser.ProcContext):
         return self.visitChildren(ctx)

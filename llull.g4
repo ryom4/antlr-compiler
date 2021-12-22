@@ -1,8 +1,8 @@
 grammar llull;
 
-root: program EOF;
+root: (proc)+ EOF;
 
-program: (proc)+;
+//program: (proc)+;
 
 
 proc: VOID ID LP (ID (',' ID)*)? RP LB statements RB; 

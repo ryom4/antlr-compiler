@@ -1,8 +1,12 @@
 void main() {
-    # hola que  tal 234 djf
-    write("hola que tal 234   < sdf")
+    read(n)
+    hanoi(n, 1, 2, 3)
 }
 
 void hanoi(n, ori, dst, aux) {
-    a = 4
+    if (n > 0) {
+        hanoi(n - 1, ori, aux, dst)
+        write(ori, "->", dst)
+        hanoi(n - 1, aux, dst, ori)
+    }
 }

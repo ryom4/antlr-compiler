@@ -99,28 +99,19 @@ class EvalVisitor(llullVisitor):
     def visitProcCall(self, ctx):
         l = list(ctx.getChildren())
         procname = l[0].getText()
-#        params = list(ctx.parameters())
-#        print(params[0].getText())
         newmem = {}
         i = 2
 
-#        for param in list(self.processes[procname].parameters):
-#            while params[i] != ',':
-#                if not params[i].isnumeric():
-#                    newmem[param] = self.mem[-1][params[i]]
-#                else:
-#                    newmem[param] = params[i]
-#
-#            i += 1
 
-        listParameters = list(self.processes[procname].parameters)
+        listParameters = (self.processes[procname].parameters)
 
         while l[i].getText() != ')':
             if l[i].getText() != ',':
-                if not l[i].getText().isnumeric():
-                    newmem[listParameters[i-2]] = self.mem[-1][l[i].getText()]
+                newparam = self.visit(l[i])
+                if isinstance(newparam, int):
+                    newmem[listParameters[i-2]] = newparam
                 else:
-                    newmem[listParameters[i-2]] = l[i].getText()
+                    newmem[listParameters[i-2]] = self.mem[-1][l[i].getText()]
 
             i += 1
 
@@ -134,8 +125,10 @@ class EvalVisitor(llullVisitor):
         i = 2
 
         while i < len(l):
-            print(self.visit(l[i]))
+            print(self.visit(l[i]), end=" ")
             i += 2
+
+        print(end="\n") 
 
     def visitRead(self, ctx):
         l = list(ctx.getChildren())

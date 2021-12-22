@@ -12,91 +12,90 @@ else:
 def serializedATN():
     with StringIO() as buf:
         buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\"")
-        buf.write("\u00d9\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7")
+        buf.write("\u00d6\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7")
         buf.write("\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t\13\4\f\t\f\4\r\t\r\4\16")
-        buf.write("\t\16\4\17\t\17\4\20\t\20\4\21\t\21\3\2\3\2\3\2\3\3\6")
-        buf.write("\3\'\n\3\r\3\16\3(\3\4\3\4\3\4\3\4\3\4\3\4\7\4\61\n\4")
-        buf.write("\f\4\16\4\64\13\4\5\4\66\n\4\3\4\3\4\3\4\3\4\3\4\3\5\3")
-        buf.write("\5\3\5\3\5\3\5\3\5\3\5\3\5\3\5\3\5\6\5G\n\5\r\5\16\5H")
-        buf.write("\3\6\3\6\3\6\3\6\3\6\7\6P\n\6\f\6\16\6S\13\6\5\6U\n\6")
-        buf.write("\3\6\3\6\3\7\3\7\3\7\3\7\3\7\7\7^\n\7\f\7\16\7a\13\7\3")
-        buf.write("\7\3\7\3\b\3\b\3\b\3\b\3\b\3\t\3\t\3\t\3\t\3\n\3\n\3\n")
-        buf.write("\3\n\3\n\3\n\3\n\3\13\3\13\3\13\3\13\3\13\3\13\3\13\3")
-        buf.write("\13\3\13\3\f\3\f\3\f\3\f\3\f\3\f\3\f\3\f\5\f\u0086\n\f")
-        buf.write("\3\r\3\r\3\r\3\r\3\r\3\16\3\16\3\16\3\16\3\16\3\16\3\16")
-        buf.write("\3\16\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17")
-        buf.write("\3\17\3\17\3\20\3\20\3\20\3\20\3\20\3\20\3\20\3\20\3\20")
-        buf.write("\3\20\3\20\3\20\3\20\3\20\3\20\3\20\3\20\3\20\3\20\3\20")
-        buf.write("\3\20\3\20\3\20\3\20\5\20\u00b9\n\20\3\21\3\21\3\21\3")
-        buf.write("\21\3\21\3\21\3\21\3\21\3\21\3\21\3\21\5\21\u00c6\n\21")
-        buf.write("\3\21\3\21\3\21\3\21\3\21\3\21\3\21\3\21\3\21\3\21\3\21")
-        buf.write("\3\21\7\21\u00d4\n\21\f\21\16\21\u00d7\13\21\3\21\2\3")
-        buf.write(" \22\2\4\6\b\n\f\16\20\22\24\26\30\32\34\36 \2\2\2\u00e5")
-        buf.write("\2\"\3\2\2\2\4&\3\2\2\2\6*\3\2\2\2\bF\3\2\2\2\nJ\3\2\2")
-        buf.write("\2\fX\3\2\2\2\16d\3\2\2\2\20i\3\2\2\2\22m\3\2\2\2\24t")
-        buf.write("\3\2\2\2\26}\3\2\2\2\30\u0087\3\2\2\2\32\u008c\3\2\2\2")
-        buf.write("\34\u0094\3\2\2\2\36\u00b8\3\2\2\2 \u00c5\3\2\2\2\"#\5")
-        buf.write("\4\3\2#$\7\2\2\3$\3\3\2\2\2%\'\5\6\4\2&%\3\2\2\2\'(\3")
-        buf.write("\2\2\2(&\3\2\2\2()\3\2\2\2)\5\3\2\2\2*+\7\16\2\2+,\7\20")
-        buf.write("\2\2,\65\7\26\2\2-\62\7\20\2\2./\7\3\2\2/\61\7\20\2\2")
-        buf.write("\60.\3\2\2\2\61\64\3\2\2\2\62\60\3\2\2\2\62\63\3\2\2\2")
-        buf.write("\63\66\3\2\2\2\64\62\3\2\2\2\65-\3\2\2\2\65\66\3\2\2\2")
-        buf.write("\66\67\3\2\2\2\678\7\27\2\289\7\30\2\29:\5\b\5\2:;\7\31")
-        buf.write("\2\2;\7\3\2\2\2<G\5\f\7\2=G\5 \21\2>G\5\20\t\2?G\5\n\6")
-        buf.write("\2@G\5\26\f\2AG\5\32\16\2BG\5\34\17\2CG\5\22\n\2DG\5\24")
-        buf.write("\13\2EG\5\16\b\2F<\3\2\2\2F=\3\2\2\2F>\3\2\2\2F?\3\2\2")
-        buf.write("\2F@\3\2\2\2FA\3\2\2\2FB\3\2\2\2FC\3\2\2\2FD\3\2\2\2F")
-        buf.write("E\3\2\2\2GH\3\2\2\2HF\3\2\2\2HI\3\2\2\2I\t\3\2\2\2JK\7")
-        buf.write("\20\2\2KT\7\26\2\2LQ\5 \21\2MN\7\3\2\2NP\5 \21\2OM\3\2")
-        buf.write("\2\2PS\3\2\2\2QO\3\2\2\2QR\3\2\2\2RU\3\2\2\2SQ\3\2\2\2")
-        buf.write("TL\3\2\2\2TU\3\2\2\2UV\3\2\2\2VW\7\27\2\2W\13\3\2\2\2")
-        buf.write("XY\7\r\2\2YZ\7\26\2\2Z_\5 \21\2[\\\7\3\2\2\\^\5 \21\2")
-        buf.write("][\3\2\2\2^a\3\2\2\2_]\3\2\2\2_`\3\2\2\2`b\3\2\2\2a_\3")
-        buf.write("\2\2\2bc\7\27\2\2c\r\3\2\2\2de\7\5\2\2ef\7\26\2\2fg\7")
-        buf.write("\20\2\2gh\7\27\2\2h\17\3\2\2\2ij\7\20\2\2jk\7\32\2\2k")
-        buf.write("l\5 \21\2l\21\3\2\2\2mn\7\b\2\2no\7\26\2\2op\7\20\2\2")
-        buf.write("pq\7\3\2\2qr\5 \21\2rs\7\27\2\2s\23\3\2\2\2tu\7\6\2\2")
-        buf.write("uv\7\26\2\2vw\7\20\2\2wx\7\3\2\2xy\5 \21\2yz\7\3\2\2z")
-        buf.write("{\5 \21\2{|\7\27\2\2|\25\3\2\2\2}~\7\f\2\2~\177\7\26\2")
-        buf.write("\2\177\u0080\5\36\20\2\u0080\u0081\7\27\2\2\u0081\u0082")
-        buf.write("\7\30\2\2\u0082\u0083\5\b\5\2\u0083\u0085\7\31\2\2\u0084")
-        buf.write("\u0086\5\30\r\2\u0085\u0084\3\2\2\2\u0085\u0086\3\2\2")
-        buf.write("\2\u0086\27\3\2\2\2\u0087\u0088\7\13\2\2\u0088\u0089\7")
-        buf.write("\30\2\2\u0089\u008a\5\b\5\2\u008a\u008b\7\31\2\2\u008b")
-        buf.write("\31\3\2\2\2\u008c\u008d\7\n\2\2\u008d\u008e\7\26\2\2\u008e")
-        buf.write("\u008f\5\36\20\2\u008f\u0090\7\27\2\2\u0090\u0091\7\30")
-        buf.write("\2\2\u0091\u0092\5\b\5\2\u0092\u0093\7\31\2\2\u0093\33")
-        buf.write("\3\2\2\2\u0094\u0095\7\t\2\2\u0095\u0096\7\26\2\2\u0096")
-        buf.write("\u0097\5\20\t\2\u0097\u0098\7\4\2\2\u0098\u0099\5\36\20")
-        buf.write("\2\u0099\u009a\7\4\2\2\u009a\u009b\5\20\t\2\u009b\u009c")
-        buf.write("\7\27\2\2\u009c\u009d\7\30\2\2\u009d\u009e\5\b\5\2\u009e")
-        buf.write("\u009f\7\31\2\2\u009f\35\3\2\2\2\u00a0\u00a1\5 \21\2\u00a1")
-        buf.write("\u00a2\7\35\2\2\u00a2\u00a3\5 \21\2\u00a3\u00b9\3\2\2")
-        buf.write("\2\u00a4\u00a5\5 \21\2\u00a5\u00a6\7\36\2\2\u00a6\u00a7")
-        buf.write("\5 \21\2\u00a7\u00b9\3\2\2\2\u00a8\u00a9\5 \21\2\u00a9")
-        buf.write("\u00aa\7\33\2\2\u00aa\u00ab\5 \21\2\u00ab\u00b9\3\2\2")
-        buf.write("\2\u00ac\u00ad\5 \21\2\u00ad\u00ae\7\34\2\2\u00ae\u00af")
-        buf.write("\5 \21\2\u00af\u00b9\3\2\2\2\u00b0\u00b1\5 \21\2\u00b1")
-        buf.write("\u00b2\7\37\2\2\u00b2\u00b3\5 \21\2\u00b3\u00b9\3\2\2")
-        buf.write("\2\u00b4\u00b5\5 \21\2\u00b5\u00b6\7 \2\2\u00b6\u00b7")
-        buf.write("\5 \21\2\u00b7\u00b9\3\2\2\2\u00b8\u00a0\3\2\2\2\u00b8")
-        buf.write("\u00a4\3\2\2\2\u00b8\u00a8\3\2\2\2\u00b8\u00ac\3\2\2\2")
-        buf.write("\u00b8\u00b0\3\2\2\2\u00b8\u00b4\3\2\2\2\u00b9\37\3\2")
-        buf.write("\2\2\u00ba\u00bb\b\21\1\2\u00bb\u00c6\7\20\2\2\u00bc\u00c6")
-        buf.write("\7\25\2\2\u00bd\u00be\7\7\2\2\u00be\u00bf\7\26\2\2\u00bf")
-        buf.write("\u00c0\7\20\2\2\u00c0\u00c1\7\3\2\2\u00c1\u00c2\5 \21")
-        buf.write("\2\u00c2\u00c3\7\27\2\2\u00c3\u00c6\3\2\2\2\u00c4\u00c6")
-        buf.write("\7\17\2\2\u00c5\u00ba\3\2\2\2\u00c5\u00bc\3\2\2\2\u00c5")
-        buf.write("\u00bd\3\2\2\2\u00c5\u00c4\3\2\2\2\u00c6\u00d5\3\2\2\2")
-        buf.write("\u00c7\u00c8\f\n\2\2\u00c8\u00c9\7\24\2\2\u00c9\u00d4")
-        buf.write("\5 \21\13\u00ca\u00cb\f\t\2\2\u00cb\u00cc\7\23\2\2\u00cc")
-        buf.write("\u00d4\5 \21\n\u00cd\u00ce\f\b\2\2\u00ce\u00cf\7\22\2")
-        buf.write("\2\u00cf\u00d4\5 \21\t\u00d0\u00d1\f\7\2\2\u00d1\u00d2")
-        buf.write("\7\21\2\2\u00d2\u00d4\5 \21\b\u00d3\u00c7\3\2\2\2\u00d3")
-        buf.write("\u00ca\3\2\2\2\u00d3\u00cd\3\2\2\2\u00d3\u00d0\3\2\2\2")
-        buf.write("\u00d4\u00d7\3\2\2\2\u00d5\u00d3\3\2\2\2\u00d5\u00d6\3")
-        buf.write("\2\2\2\u00d6!\3\2\2\2\u00d7\u00d5\3\2\2\2\17(\62\65FH")
-        buf.write("QT_\u0085\u00b8\u00c5\u00d3\u00d5")
+        buf.write("\t\16\4\17\t\17\4\20\t\20\3\2\6\2\"\n\2\r\2\16\2#\3\2")
+        buf.write("\3\2\3\3\3\3\3\3\3\3\3\3\3\3\7\3.\n\3\f\3\16\3\61\13\3")
+        buf.write("\5\3\63\n\3\3\3\3\3\3\3\3\3\3\3\3\4\3\4\3\4\3\4\3\4\3")
+        buf.write("\4\3\4\3\4\3\4\3\4\6\4D\n\4\r\4\16\4E\3\5\3\5\3\5\3\5")
+        buf.write("\3\5\7\5M\n\5\f\5\16\5P\13\5\5\5R\n\5\3\5\3\5\3\6\3\6")
+        buf.write("\3\6\3\6\3\6\7\6[\n\6\f\6\16\6^\13\6\3\6\3\6\3\7\3\7\3")
+        buf.write("\7\3\7\3\7\3\b\3\b\3\b\3\b\3\t\3\t\3\t\3\t\3\t\3\t\3\t")
+        buf.write("\3\n\3\n\3\n\3\n\3\n\3\n\3\n\3\n\3\n\3\13\3\13\3\13\3")
+        buf.write("\13\3\13\3\13\3\13\3\13\5\13\u0083\n\13\3\f\3\f\3\f\3")
+        buf.write("\f\3\f\3\r\3\r\3\r\3\r\3\r\3\r\3\r\3\r\3\16\3\16\3\16")
+        buf.write("\3\16\3\16\3\16\3\16\3\16\3\16\3\16\3\16\3\16\3\17\3\17")
+        buf.write("\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17")
+        buf.write("\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17")
+        buf.write("\5\17\u00b6\n\17\3\20\3\20\3\20\3\20\3\20\3\20\3\20\3")
+        buf.write("\20\3\20\3\20\3\20\5\20\u00c3\n\20\3\20\3\20\3\20\3\20")
+        buf.write("\3\20\3\20\3\20\3\20\3\20\3\20\3\20\3\20\7\20\u00d1\n")
+        buf.write("\20\f\20\16\20\u00d4\13\20\3\20\2\3\36\21\2\4\6\b\n\f")
+        buf.write("\16\20\22\24\26\30\32\34\36\2\2\2\u00e3\2!\3\2\2\2\4\'")
+        buf.write("\3\2\2\2\6C\3\2\2\2\bG\3\2\2\2\nU\3\2\2\2\fa\3\2\2\2\16")
+        buf.write("f\3\2\2\2\20j\3\2\2\2\22q\3\2\2\2\24z\3\2\2\2\26\u0084")
+        buf.write("\3\2\2\2\30\u0089\3\2\2\2\32\u0091\3\2\2\2\34\u00b5\3")
+        buf.write("\2\2\2\36\u00c2\3\2\2\2 \"\5\4\3\2! \3\2\2\2\"#\3\2\2")
+        buf.write("\2#!\3\2\2\2#$\3\2\2\2$%\3\2\2\2%&\7\2\2\3&\3\3\2\2\2")
+        buf.write("\'(\7\16\2\2()\7\20\2\2)\62\7\26\2\2*/\7\20\2\2+,\7\3")
+        buf.write("\2\2,.\7\20\2\2-+\3\2\2\2.\61\3\2\2\2/-\3\2\2\2/\60\3")
+        buf.write("\2\2\2\60\63\3\2\2\2\61/\3\2\2\2\62*\3\2\2\2\62\63\3\2")
+        buf.write("\2\2\63\64\3\2\2\2\64\65\7\27\2\2\65\66\7\30\2\2\66\67")
+        buf.write("\5\6\4\2\678\7\31\2\28\5\3\2\2\29D\5\n\6\2:D\5\36\20\2")
+        buf.write(";D\5\16\b\2<D\5\b\5\2=D\5\24\13\2>D\5\30\r\2?D\5\32\16")
+        buf.write("\2@D\5\20\t\2AD\5\22\n\2BD\5\f\7\2C9\3\2\2\2C:\3\2\2\2")
+        buf.write("C;\3\2\2\2C<\3\2\2\2C=\3\2\2\2C>\3\2\2\2C?\3\2\2\2C@\3")
+        buf.write("\2\2\2CA\3\2\2\2CB\3\2\2\2DE\3\2\2\2EC\3\2\2\2EF\3\2\2")
+        buf.write("\2F\7\3\2\2\2GH\7\20\2\2HQ\7\26\2\2IN\5\36\20\2JK\7\3")
+        buf.write("\2\2KM\5\36\20\2LJ\3\2\2\2MP\3\2\2\2NL\3\2\2\2NO\3\2\2")
+        buf.write("\2OR\3\2\2\2PN\3\2\2\2QI\3\2\2\2QR\3\2\2\2RS\3\2\2\2S")
+        buf.write("T\7\27\2\2T\t\3\2\2\2UV\7\r\2\2VW\7\26\2\2W\\\5\36\20")
+        buf.write("\2XY\7\3\2\2Y[\5\36\20\2ZX\3\2\2\2[^\3\2\2\2\\Z\3\2\2")
+        buf.write("\2\\]\3\2\2\2]_\3\2\2\2^\\\3\2\2\2_`\7\27\2\2`\13\3\2")
+        buf.write("\2\2ab\7\5\2\2bc\7\26\2\2cd\7\20\2\2de\7\27\2\2e\r\3\2")
+        buf.write("\2\2fg\7\20\2\2gh\7\32\2\2hi\5\36\20\2i\17\3\2\2\2jk\7")
+        buf.write("\b\2\2kl\7\26\2\2lm\7\20\2\2mn\7\3\2\2no\5\36\20\2op\7")
+        buf.write("\27\2\2p\21\3\2\2\2qr\7\6\2\2rs\7\26\2\2st\7\20\2\2tu")
+        buf.write("\7\3\2\2uv\5\36\20\2vw\7\3\2\2wx\5\36\20\2xy\7\27\2\2")
+        buf.write("y\23\3\2\2\2z{\7\f\2\2{|\7\26\2\2|}\5\34\17\2}~\7\27\2")
+        buf.write("\2~\177\7\30\2\2\177\u0080\5\6\4\2\u0080\u0082\7\31\2")
+        buf.write("\2\u0081\u0083\5\26\f\2\u0082\u0081\3\2\2\2\u0082\u0083")
+        buf.write("\3\2\2\2\u0083\25\3\2\2\2\u0084\u0085\7\13\2\2\u0085\u0086")
+        buf.write("\7\30\2\2\u0086\u0087\5\6\4\2\u0087\u0088\7\31\2\2\u0088")
+        buf.write("\27\3\2\2\2\u0089\u008a\7\n\2\2\u008a\u008b\7\26\2\2\u008b")
+        buf.write("\u008c\5\34\17\2\u008c\u008d\7\27\2\2\u008d\u008e\7\30")
+        buf.write("\2\2\u008e\u008f\5\6\4\2\u008f\u0090\7\31\2\2\u0090\31")
+        buf.write("\3\2\2\2\u0091\u0092\7\t\2\2\u0092\u0093\7\26\2\2\u0093")
+        buf.write("\u0094\5\16\b\2\u0094\u0095\7\4\2\2\u0095\u0096\5\34\17")
+        buf.write("\2\u0096\u0097\7\4\2\2\u0097\u0098\5\16\b\2\u0098\u0099")
+        buf.write("\7\27\2\2\u0099\u009a\7\30\2\2\u009a\u009b\5\6\4\2\u009b")
+        buf.write("\u009c\7\31\2\2\u009c\33\3\2\2\2\u009d\u009e\5\36\20\2")
+        buf.write("\u009e\u009f\7\35\2\2\u009f\u00a0\5\36\20\2\u00a0\u00b6")
+        buf.write("\3\2\2\2\u00a1\u00a2\5\36\20\2\u00a2\u00a3\7\36\2\2\u00a3")
+        buf.write("\u00a4\5\36\20\2\u00a4\u00b6\3\2\2\2\u00a5\u00a6\5\36")
+        buf.write("\20\2\u00a6\u00a7\7\33\2\2\u00a7\u00a8\5\36\20\2\u00a8")
+        buf.write("\u00b6\3\2\2\2\u00a9\u00aa\5\36\20\2\u00aa\u00ab\7\34")
+        buf.write("\2\2\u00ab\u00ac\5\36\20\2\u00ac\u00b6\3\2\2\2\u00ad\u00ae")
+        buf.write("\5\36\20\2\u00ae\u00af\7\37\2\2\u00af\u00b0\5\36\20\2")
+        buf.write("\u00b0\u00b6\3\2\2\2\u00b1\u00b2\5\36\20\2\u00b2\u00b3")
+        buf.write("\7 \2\2\u00b3\u00b4\5\36\20\2\u00b4\u00b6\3\2\2\2\u00b5")
+        buf.write("\u009d\3\2\2\2\u00b5\u00a1\3\2\2\2\u00b5\u00a5\3\2\2\2")
+        buf.write("\u00b5\u00a9\3\2\2\2\u00b5\u00ad\3\2\2\2\u00b5\u00b1\3")
+        buf.write("\2\2\2\u00b6\35\3\2\2\2\u00b7\u00b8\b\20\1\2\u00b8\u00c3")
+        buf.write("\7\20\2\2\u00b9\u00c3\7\25\2\2\u00ba\u00bb\7\7\2\2\u00bb")
+        buf.write("\u00bc\7\26\2\2\u00bc\u00bd\7\20\2\2\u00bd\u00be\7\3\2")
+        buf.write("\2\u00be\u00bf\5\36\20\2\u00bf\u00c0\7\27\2\2\u00c0\u00c3")
+        buf.write("\3\2\2\2\u00c1\u00c3\7\17\2\2\u00c2\u00b7\3\2\2\2\u00c2")
+        buf.write("\u00b9\3\2\2\2\u00c2\u00ba\3\2\2\2\u00c2\u00c1\3\2\2\2")
+        buf.write("\u00c3\u00d2\3\2\2\2\u00c4\u00c5\f\n\2\2\u00c5\u00c6\7")
+        buf.write("\24\2\2\u00c6\u00d1\5\36\20\13\u00c7\u00c8\f\t\2\2\u00c8")
+        buf.write("\u00c9\7\23\2\2\u00c9\u00d1\5\36\20\n\u00ca\u00cb\f\b")
+        buf.write("\2\2\u00cb\u00cc\7\22\2\2\u00cc\u00d1\5\36\20\t\u00cd")
+        buf.write("\u00ce\f\7\2\2\u00ce\u00cf\7\21\2\2\u00cf\u00d1\5\36\20")
+        buf.write("\b\u00d0\u00c4\3\2\2\2\u00d0\u00c7\3\2\2\2\u00d0\u00ca")
+        buf.write("\3\2\2\2\u00d0\u00cd\3\2\2\2\u00d1\u00d4\3\2\2\2\u00d2")
+        buf.write("\u00d0\3\2\2\2\u00d2\u00d3\3\2\2\2\u00d3\37\3\2\2\2\u00d4")
+        buf.write("\u00d2\3\2\2\2\17#/\62CENQ\\\u0082\u00b5\u00c2\u00d0\u00d2")
         return buf.getvalue()
 
 
@@ -124,25 +123,24 @@ class llullParser ( Parser ):
                       "WS" ]
 
     RULE_root = 0
-    RULE_program = 1
-    RULE_proc = 2
-    RULE_statements = 3
-    RULE_procCall = 4
-    RULE_write = 5
-    RULE_read = 6
-    RULE_ass = 7
-    RULE_array = 8
-    RULE_setArray = 9
-    RULE_conditional = 10
-    RULE_elseConditional = 11
-    RULE_loop = 12
-    RULE_forloop = 13
-    RULE_cond = 14
-    RULE_expr = 15
+    RULE_proc = 1
+    RULE_statements = 2
+    RULE_procCall = 3
+    RULE_write = 4
+    RULE_read = 5
+    RULE_ass = 6
+    RULE_array = 7
+    RULE_setArray = 8
+    RULE_conditional = 9
+    RULE_elseConditional = 10
+    RULE_loop = 11
+    RULE_forloop = 12
+    RULE_cond = 13
+    RULE_expr = 14
 
-    ruleNames =  [ "root", "program", "proc", "statements", "procCall", 
-                   "write", "read", "ass", "array", "setArray", "conditional", 
-                   "elseConditional", "loop", "forloop", "cond", "expr" ]
+    ruleNames =  [ "root", "proc", "statements", "procCall", "write", "read", 
+                   "ass", "array", "setArray", "conditional", "elseConditional", 
+                   "loop", "forloop", "cond", "expr" ]
 
     EOF = Token.EOF
     T__0=1
@@ -193,12 +191,15 @@ class llullParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def program(self):
-            return self.getTypedRuleContext(llullParser.ProgramContext,0)
-
-
         def EOF(self):
             return self.getToken(llullParser.EOF, 0)
+
+        def proc(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(llullParser.ProcContext)
+            else:
+                return self.getTypedRuleContext(llullParser.ProcContext,i)
+
 
         def getRuleIndex(self):
             return llullParser.RULE_root
@@ -216,65 +217,23 @@ class llullParser ( Parser ):
 
         localctx = llullParser.RootContext(self, self._ctx, self.state)
         self.enterRule(localctx, 0, self.RULE_root)
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 32
-            self.program()
-            self.state = 33
-            self.match(llullParser.EOF)
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-
-    class ProgramContext(ParserRuleContext):
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def proc(self, i:int=None):
-            if i is None:
-                return self.getTypedRuleContexts(llullParser.ProcContext)
-            else:
-                return self.getTypedRuleContext(llullParser.ProcContext,i)
-
-
-        def getRuleIndex(self):
-            return llullParser.RULE_program
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitProgram" ):
-                return visitor.visitProgram(self)
-            else:
-                return visitor.visitChildren(self)
-
-
-
-
-    def program(self):
-
-        localctx = llullParser.ProgramContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 2, self.RULE_program)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 36 
+            self.state = 31 
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while True:
-                self.state = 35
+                self.state = 30
                 self.proc()
-                self.state = 38 
+                self.state = 33 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if not (_la==llullParser.VOID):
                     break
 
+            self.state = 35
+            self.match(llullParser.EOF)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -330,43 +289,43 @@ class llullParser ( Parser ):
     def proc(self):
 
         localctx = llullParser.ProcContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 4, self.RULE_proc)
+        self.enterRule(localctx, 2, self.RULE_proc)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 40
+            self.state = 37
             self.match(llullParser.VOID)
-            self.state = 41
+            self.state = 38
             self.match(llullParser.ID)
-            self.state = 42
+            self.state = 39
             self.match(llullParser.LP)
-            self.state = 51
+            self.state = 48
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==llullParser.ID:
-                self.state = 43
+                self.state = 40
                 self.match(llullParser.ID)
-                self.state = 48
+                self.state = 45
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while _la==llullParser.T__0:
-                    self.state = 44
+                    self.state = 41
                     self.match(llullParser.T__0)
-                    self.state = 45
+                    self.state = 42
                     self.match(llullParser.ID)
-                    self.state = 50
+                    self.state = 47
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
 
 
 
-            self.state = 53
+            self.state = 50
             self.match(llullParser.RP)
-            self.state = 54
+            self.state = 51
             self.match(llullParser.LB)
-            self.state = 55
+            self.state = 52
             self.statements()
-            self.state = 56
+            self.state = 53
             self.match(llullParser.RB)
         except RecognitionException as re:
             localctx.exception = re
@@ -468,69 +427,69 @@ class llullParser ( Parser ):
     def statements(self):
 
         localctx = llullParser.StatementsContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 6, self.RULE_statements)
+        self.enterRule(localctx, 4, self.RULE_statements)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 68 
+            self.state = 65 
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while True:
-                self.state = 68
+                self.state = 65
                 self._errHandler.sync(self)
                 la_ = self._interp.adaptivePredict(self._input,3,self._ctx)
                 if la_ == 1:
-                    self.state = 58
+                    self.state = 55
                     self.write()
                     pass
 
                 elif la_ == 2:
-                    self.state = 59
+                    self.state = 56
                     self.expr(0)
                     pass
 
                 elif la_ == 3:
-                    self.state = 60
+                    self.state = 57
                     self.ass()
                     pass
 
                 elif la_ == 4:
-                    self.state = 61
+                    self.state = 58
                     self.procCall()
                     pass
 
                 elif la_ == 5:
-                    self.state = 62
+                    self.state = 59
                     self.conditional()
                     pass
 
                 elif la_ == 6:
-                    self.state = 63
+                    self.state = 60
                     self.loop()
                     pass
 
                 elif la_ == 7:
-                    self.state = 64
+                    self.state = 61
                     self.forloop()
                     pass
 
                 elif la_ == 8:
-                    self.state = 65
+                    self.state = 62
                     self.array()
                     pass
 
                 elif la_ == 9:
-                    self.state = 66
+                    self.state = 63
                     self.setArray()
                     pass
 
                 elif la_ == 10:
-                    self.state = 67
+                    self.state = 64
                     self.read()
                     pass
 
 
-                self.state = 70 
+                self.state = 67 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << llullParser.READ) | (1 << llullParser.SET) | (1 << llullParser.GET) | (1 << llullParser.ARRAY) | (1 << llullParser.FOR) | (1 << llullParser.WHILE) | (1 << llullParser.IF) | (1 << llullParser.WR) | (1 << llullParser.INT) | (1 << llullParser.ID) | (1 << llullParser.STRING))) != 0)):
@@ -582,35 +541,35 @@ class llullParser ( Parser ):
     def procCall(self):
 
         localctx = llullParser.ProcCallContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 8, self.RULE_procCall)
+        self.enterRule(localctx, 6, self.RULE_procCall)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 72
+            self.state = 69
             self.match(llullParser.ID)
-            self.state = 73
+            self.state = 70
             self.match(llullParser.LP)
-            self.state = 82
+            self.state = 79
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << llullParser.GET) | (1 << llullParser.INT) | (1 << llullParser.ID) | (1 << llullParser.STRING))) != 0):
-                self.state = 74
+                self.state = 71
                 self.expr(0)
-                self.state = 79
+                self.state = 76
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while _la==llullParser.T__0:
-                    self.state = 75
+                    self.state = 72
                     self.match(llullParser.T__0)
-                    self.state = 76
+                    self.state = 73
                     self.expr(0)
-                    self.state = 81
+                    self.state = 78
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
 
 
 
-            self.state = 84
+            self.state = 81
             self.match(llullParser.RP)
         except RecognitionException as re:
             localctx.exception = re
@@ -658,29 +617,29 @@ class llullParser ( Parser ):
     def write(self):
 
         localctx = llullParser.WriteContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 10, self.RULE_write)
+        self.enterRule(localctx, 8, self.RULE_write)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 86
+            self.state = 83
             self.match(llullParser.WR)
-            self.state = 87
+            self.state = 84
             self.match(llullParser.LP)
-            self.state = 88
+            self.state = 85
             self.expr(0)
-            self.state = 93
+            self.state = 90
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while _la==llullParser.T__0:
-                self.state = 89
+                self.state = 86
                 self.match(llullParser.T__0)
-                self.state = 90
+                self.state = 87
                 self.expr(0)
-                self.state = 95
+                self.state = 92
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 96
+            self.state = 93
             self.match(llullParser.RP)
         except RecognitionException as re:
             localctx.exception = re
@@ -724,16 +683,16 @@ class llullParser ( Parser ):
     def read(self):
 
         localctx = llullParser.ReadContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 12, self.RULE_read)
+        self.enterRule(localctx, 10, self.RULE_read)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 98
+            self.state = 95
             self.match(llullParser.READ)
-            self.state = 99
+            self.state = 96
             self.match(llullParser.LP)
-            self.state = 100
+            self.state = 97
             self.match(llullParser.ID)
-            self.state = 101
+            self.state = 98
             self.match(llullParser.RP)
         except RecognitionException as re:
             localctx.exception = re
@@ -775,14 +734,14 @@ class llullParser ( Parser ):
     def ass(self):
 
         localctx = llullParser.AssContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 14, self.RULE_ass)
+        self.enterRule(localctx, 12, self.RULE_ass)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 103
+            self.state = 100
             self.match(llullParser.ID)
-            self.state = 104
+            self.state = 101
             self.match(llullParser.IG)
-            self.state = 105
+            self.state = 102
             self.expr(0)
         except RecognitionException as re:
             localctx.exception = re
@@ -830,20 +789,20 @@ class llullParser ( Parser ):
     def array(self):
 
         localctx = llullParser.ArrayContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 16, self.RULE_array)
+        self.enterRule(localctx, 14, self.RULE_array)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 107
+            self.state = 104
             self.match(llullParser.ARRAY)
-            self.state = 108
+            self.state = 105
             self.match(llullParser.LP)
-            self.state = 109
+            self.state = 106
             self.match(llullParser.ID)
-            self.state = 110
+            self.state = 107
             self.match(llullParser.T__0)
-            self.state = 111
+            self.state = 108
             self.expr(0)
-            self.state = 112
+            self.state = 109
             self.match(llullParser.RP)
         except RecognitionException as re:
             localctx.exception = re
@@ -894,24 +853,24 @@ class llullParser ( Parser ):
     def setArray(self):
 
         localctx = llullParser.SetArrayContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 18, self.RULE_setArray)
+        self.enterRule(localctx, 16, self.RULE_setArray)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 114
+            self.state = 111
             self.match(llullParser.SET)
-            self.state = 115
+            self.state = 112
             self.match(llullParser.LP)
-            self.state = 116
+            self.state = 113
             self.match(llullParser.ID)
+            self.state = 114
+            self.match(llullParser.T__0)
+            self.state = 115
+            self.expr(0)
+            self.state = 116
+            self.match(llullParser.T__0)
             self.state = 117
-            self.match(llullParser.T__0)
+            self.expr(0)
             self.state = 118
-            self.expr(0)
-            self.state = 119
-            self.match(llullParser.T__0)
-            self.state = 120
-            self.expr(0)
-            self.state = 121
             self.match(llullParser.RP)
         except RecognitionException as re:
             localctx.exception = re
@@ -970,29 +929,29 @@ class llullParser ( Parser ):
     def conditional(self):
 
         localctx = llullParser.ConditionalContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 20, self.RULE_conditional)
+        self.enterRule(localctx, 18, self.RULE_conditional)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 123
+            self.state = 120
             self.match(llullParser.IF)
-            self.state = 124
+            self.state = 121
             self.match(llullParser.LP)
-            self.state = 125
+            self.state = 122
             self.cond()
-            self.state = 126
+            self.state = 123
             self.match(llullParser.RP)
-            self.state = 127
+            self.state = 124
             self.match(llullParser.LB)
-            self.state = 128
+            self.state = 125
             self.statements()
-            self.state = 129
+            self.state = 126
             self.match(llullParser.RB)
-            self.state = 131
+            self.state = 128
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==llullParser.ELSE:
-                self.state = 130
+                self.state = 127
                 self.elseConditional()
 
 
@@ -1039,16 +998,16 @@ class llullParser ( Parser ):
     def elseConditional(self):
 
         localctx = llullParser.ElseConditionalContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 22, self.RULE_elseConditional)
+        self.enterRule(localctx, 20, self.RULE_elseConditional)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 133
+            self.state = 130
             self.match(llullParser.ELSE)
-            self.state = 134
+            self.state = 131
             self.match(llullParser.LB)
-            self.state = 135
+            self.state = 132
             self.statements()
-            self.state = 136
+            self.state = 133
             self.match(llullParser.RB)
         except RecognitionException as re:
             localctx.exception = re
@@ -1103,22 +1062,22 @@ class llullParser ( Parser ):
     def loop(self):
 
         localctx = llullParser.LoopContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 24, self.RULE_loop)
+        self.enterRule(localctx, 22, self.RULE_loop)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 138
+            self.state = 135
             self.match(llullParser.WHILE)
-            self.state = 139
+            self.state = 136
             self.match(llullParser.LP)
-            self.state = 140
+            self.state = 137
             self.cond()
-            self.state = 141
+            self.state = 138
             self.match(llullParser.RP)
-            self.state = 142
+            self.state = 139
             self.match(llullParser.LB)
-            self.state = 143
+            self.state = 140
             self.statements()
-            self.state = 144
+            self.state = 141
             self.match(llullParser.RB)
         except RecognitionException as re:
             localctx.exception = re
@@ -1180,30 +1139,30 @@ class llullParser ( Parser ):
     def forloop(self):
 
         localctx = llullParser.ForloopContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 26, self.RULE_forloop)
+        self.enterRule(localctx, 24, self.RULE_forloop)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 146
+            self.state = 143
             self.match(llullParser.FOR)
-            self.state = 147
+            self.state = 144
             self.match(llullParser.LP)
-            self.state = 148
+            self.state = 145
             self.ass()
-            self.state = 149
+            self.state = 146
             self.match(llullParser.T__1)
-            self.state = 150
+            self.state = 147
             self.cond()
-            self.state = 151
+            self.state = 148
             self.match(llullParser.T__1)
-            self.state = 152
+            self.state = 149
             self.ass()
-            self.state = 153
+            self.state = 150
             self.match(llullParser.RP)
-            self.state = 154
+            self.state = 151
             self.match(llullParser.LB)
-            self.state = 155
+            self.state = 152
             self.statements()
-            self.state = 156
+            self.state = 153
             self.match(llullParser.RB)
         except RecognitionException as re:
             localctx.exception = re
@@ -1260,68 +1219,68 @@ class llullParser ( Parser ):
     def cond(self):
 
         localctx = llullParser.CondContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 28, self.RULE_cond)
+        self.enterRule(localctx, 26, self.RULE_cond)
         try:
-            self.state = 182
+            self.state = 179
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,9,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 158
+                self.state = 155
                 self.expr(0)
-                self.state = 159
+                self.state = 156
                 self.match(llullParser.MENOR)
-                self.state = 160
+                self.state = 157
                 self.expr(0)
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 162
+                self.state = 159
                 self.expr(0)
-                self.state = 163
+                self.state = 160
                 self.match(llullParser.MAJOR)
-                self.state = 164
+                self.state = 161
                 self.expr(0)
                 pass
 
             elif la_ == 3:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 166
+                self.state = 163
                 self.expr(0)
-                self.state = 167
+                self.state = 164
                 self.match(llullParser.IGUAL)
-                self.state = 168
+                self.state = 165
                 self.expr(0)
                 pass
 
             elif la_ == 4:
                 self.enterOuterAlt(localctx, 4)
-                self.state = 170
+                self.state = 167
                 self.expr(0)
-                self.state = 171
+                self.state = 168
                 self.match(llullParser.DIFERENCIA)
-                self.state = 172
+                self.state = 169
                 self.expr(0)
                 pass
 
             elif la_ == 5:
                 self.enterOuterAlt(localctx, 5)
-                self.state = 174
+                self.state = 171
                 self.expr(0)
-                self.state = 175
+                self.state = 172
                 self.match(llullParser.MENORIGUAL)
-                self.state = 176
+                self.state = 173
                 self.expr(0)
                 pass
 
             elif la_ == 6:
                 self.enterOuterAlt(localctx, 6)
-                self.state = 178
+                self.state = 175
                 self.expr(0)
-                self.state = 179
+                self.state = 176
                 self.match(llullParser.MAJORIGUAL)
-                self.state = 180
+                self.state = 177
                 self.expr(0)
                 pass
 
@@ -1517,11 +1476,11 @@ class llullParser ( Parser ):
         _parentState = self.state
         localctx = llullParser.ExprContext(self, self._ctx, _parentState)
         _prevctx = localctx
-        _startState = 30
-        self.enterRecursionRule(localctx, 30, self.RULE_expr, _p)
+        _startState = 28
+        self.enterRecursionRule(localctx, 28, self.RULE_expr, _p)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 195
+            self.state = 192
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [llullParser.ID]:
@@ -1529,45 +1488,45 @@ class llullParser ( Parser ):
                 self._ctx = localctx
                 _prevctx = localctx
 
-                self.state = 185
+                self.state = 182
                 self.match(llullParser.ID)
                 pass
             elif token in [llullParser.STRING]:
                 localctx = llullParser.StringContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 186
+                self.state = 183
                 self.match(llullParser.STRING)
                 pass
             elif token in [llullParser.GET]:
                 localctx = llullParser.GetContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 187
+                self.state = 184
                 self.match(llullParser.GET)
-                self.state = 188
+                self.state = 185
                 self.match(llullParser.LP)
-                self.state = 189
+                self.state = 186
                 self.match(llullParser.ID)
-                self.state = 190
+                self.state = 187
                 self.match(llullParser.T__0)
-                self.state = 191
+                self.state = 188
                 self.expr(0)
-                self.state = 192
+                self.state = 189
                 self.match(llullParser.RP)
                 pass
             elif token in [llullParser.INT]:
                 localctx = llullParser.IntContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 194
+                self.state = 191
                 self.match(llullParser.INT)
                 pass
             else:
                 raise NoViableAltException(self)
 
             self._ctx.stop = self._input.LT(-1)
-            self.state = 211
+            self.state = 208
             self._errHandler.sync(self)
             _alt = self._interp.adaptivePredict(self._input,12,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
@@ -1575,63 +1534,63 @@ class llullParser ( Parser ):
                     if self._parseListeners is not None:
                         self.triggerExitRuleEvent()
                     _prevctx = localctx
-                    self.state = 209
+                    self.state = 206
                     self._errHandler.sync(self)
                     la_ = self._interp.adaptivePredict(self._input,11,self._ctx)
                     if la_ == 1:
                         localctx = llullParser.DivContext(self, llullParser.ExprContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
-                        self.state = 197
+                        self.state = 194
                         if not self.precpred(self._ctx, 8):
                             from antlr4.error.Errors import FailedPredicateException
                             raise FailedPredicateException(self, "self.precpred(self._ctx, 8)")
-                        self.state = 198
+                        self.state = 195
                         self.match(llullParser.DIV)
-                        self.state = 199
+                        self.state = 196
                         self.expr(9)
                         pass
 
                     elif la_ == 2:
                         localctx = llullParser.MulContext(self, llullParser.ExprContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
-                        self.state = 200
+                        self.state = 197
                         if not self.precpred(self._ctx, 7):
                             from antlr4.error.Errors import FailedPredicateException
                             raise FailedPredicateException(self, "self.precpred(self._ctx, 7)")
-                        self.state = 201
+                        self.state = 198
                         self.match(llullParser.MUL)
-                        self.state = 202
+                        self.state = 199
                         self.expr(8)
                         pass
 
                     elif la_ == 3:
                         localctx = llullParser.ResContext(self, llullParser.ExprContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
-                        self.state = 203
+                        self.state = 200
                         if not self.precpred(self._ctx, 6):
                             from antlr4.error.Errors import FailedPredicateException
                             raise FailedPredicateException(self, "self.precpred(self._ctx, 6)")
-                        self.state = 204
+                        self.state = 201
                         self.match(llullParser.RES)
-                        self.state = 205
+                        self.state = 202
                         self.expr(7)
                         pass
 
                     elif la_ == 4:
                         localctx = llullParser.MesContext(self, llullParser.ExprContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
-                        self.state = 206
+                        self.state = 203
                         if not self.precpred(self._ctx, 5):
                             from antlr4.error.Errors import FailedPredicateException
                             raise FailedPredicateException(self, "self.precpred(self._ctx, 5)")
-                        self.state = 207
+                        self.state = 204
                         self.match(llullParser.MES)
-                        self.state = 208
+                        self.state = 205
                         self.expr(6)
                         pass
 
              
-                self.state = 213
+                self.state = 210
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,12,self._ctx)
 
@@ -1648,7 +1607,7 @@ class llullParser ( Parser ):
     def sempred(self, localctx:RuleContext, ruleIndex:int, predIndex:int):
         if self._predicates == None:
             self._predicates = dict()
-        self._predicates[15] = self.expr_sempred
+        self._predicates[14] = self.expr_sempred
         pred = self._predicates.get(ruleIndex, None)
         if pred is None:
             raise Exception("No predicate with index:" + str(ruleIndex))

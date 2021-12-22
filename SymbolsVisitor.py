@@ -18,22 +18,20 @@ class SymbolsVisitor(llullVisitor):
 
     def visitRoot(self, ctx):
         l = list(ctx.getChildren())
-        self.visit(l[0])
+        for proc in l:
+            self.visit(proc)
         return self.processes
 
     def visitProc(self, ctx):
         l = list(ctx.getChildren())
         procname = l[1].getText()
         statements = ctx.statements()
-        if procname == "main":
-            self.visit(statements)
-        else:
-            i = 3
-            parameters = []
-            while l[i].getText() != ')':
-                parameters.append(l[i].getText())
-                i += 1
+        i = 3
+        parameters = []
+        while l[i].getText() != ')':
+            parameters.append(l[i].getText())
+            i += 1
 
-            self.processes[procname] = SaveProcess(parameters, statements)
+        self.processes[procname] = SaveProcess(parameters, statements)
 
   
