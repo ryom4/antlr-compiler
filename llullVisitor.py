@@ -79,6 +79,11 @@ class llullVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by llullParser#parentesis.
+    def visitParentesis(self, ctx:llullParser.ParentesisContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by llullParser#div.
     def visitDiv(self, ctx:llullParser.DivContext):
         return self.visitChildren(ctx)

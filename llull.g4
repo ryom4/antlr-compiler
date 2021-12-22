@@ -11,7 +11,6 @@ proc: VOID ID LP (ID (',' ID)*)? RP LB statements RB;
 statements: (write | expr | ass | procCall | conditional | loop | forloop | array | setArray | read)+;
 
 procCall: ID LP (expr (',' expr)*)? RP;
-//parameters: (expr (',' expr)*)?;
 
 write: WR LP expr (',' expr)* RP;
 read: READ LP ID RP;
@@ -37,7 +36,8 @@ cond:
 
 
 expr:
-    expr DIV expr    #div
+    LP expr RP       #parentesis 
+    | expr DIV expr    #div
     | expr MUL expr  #mul 
     | expr RES expr  #res 
     | expr MES expr  #mes 

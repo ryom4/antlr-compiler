@@ -56,6 +56,10 @@ class EvalVisitor(llullVisitor):
         value = self.visit(l[4])
         return self.mem[-1][name][value]
 
+    def visitParentesis(self, ctx):
+        l = list(ctx.getChildren())
+        return self.visit(l[1])
+
     def visitCond(self, ctx):
         l = list(ctx.getChildren())
         op = l[1].getText()
@@ -116,7 +120,6 @@ class EvalVisitor(llullVisitor):
             i += 1
 
         self.mem.append(newmem)
-
         self.visit(self.processes[procname].statements)
         self.mem.pop()
 
@@ -149,5 +152,4 @@ class EvalVisitor(llullVisitor):
         name = l[2].getText()
         it = self.visit(l[4])
         value = self.visit(l[6])
-
         self.mem[-1][name][it] = value
