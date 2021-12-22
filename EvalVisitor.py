@@ -99,39 +99,35 @@ class EvalVisitor(llullVisitor):
     def visitProcCall(self, ctx):
         l = list(ctx.getChildren())
         procname = l[0].getText()
-        params = list(ctx.parameters().getText())
+#        params = list(ctx.parameters())
+#        print(params[0].getText())
         newmem = {}
-        i = 0
+        i = 2
 
-        if len(params) != 0:
-            for param in list(self.processes[procname].parameters):
-                if params[i] != ',':
-                    if not params[i].isnumeric():
-                        newmem[param] = self.mem[-1][params[i]]
-                    else:
-                        newmem[param] = params[i]
-                i += 1
+#        for param in list(self.processes[procname].parameters):
+#            while params[i] != ',':
+#                if not params[i].isnumeric():
+#                    newmem[param] = self.mem[-1][params[i]]
+#                else:
+#                    newmem[param] = params[i]
+#
+#            i += 1
+
+        listParameters = list(self.processes[procname].parameters)
+
+        while l[i].getText() != ')':
+            if l[i].getText() != ',':
+                if not l[i].getText().isnumeric():
+                    newmem[listParameters[i-2]] = self.mem[-1][l[i].getText()]
+                else:
+                    newmem[listParameters[i-2]] = l[i].getText()
+
+            i += 1
 
         self.mem.append(newmem)
 
         self.visit(self.processes[procname].statements)
         self.mem.pop()
-
-    def visitProc(self, ctx):
-        l = list(ctx.getChildren())
-        procname = l[1].getText()
-        statements = ctx.statements()
-
-        if procname == "main":
-            self.visit(statements)
-        else:
-            i = 3
-            parameters = []
-            while l[i].getText() != ')':
-                parameters.append(l[i].getText())
-                i += 1
-
-            self.processes[procname] = SaveProcess(parameters, statements)
 
     def visitWrite(self, ctx):
         l = list(ctx.getChildren())

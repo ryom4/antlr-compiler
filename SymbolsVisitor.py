@@ -25,7 +25,6 @@ class SymbolsVisitor(llullVisitor):
         l = list(ctx.getChildren())
         procname = l[1].getText()
         statements = ctx.statements()
-
         if procname == "main":
             self.visit(statements)
         else:

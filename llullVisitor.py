@@ -34,11 +34,6 @@ class llullVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by llullParser#parameters.
-    def visitParameters(self, ctx:llullParser.ParametersContext):
-        return self.visitChildren(ctx)
-
-
     # Visit a parse tree produced by llullParser#write.
     def visitWrite(self, ctx:llullParser.WriteContext):
         return self.visitChildren(ctx)
