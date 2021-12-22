@@ -1,8 +1,8 @@
 grammar llull;
 
-root: (proc)+ EOF;
+root: program EOF;
 
-//program: (proc)+;
+program: (proc)+;
 
 
 proc: VOID ID LP (ID (',' ID)*)? RP LB statements RB; 
@@ -12,7 +12,7 @@ statements: (write | expr | ass | procCall | conditional | loop | forloop | arra
 
 procCall: ID LP (expr (',' expr)*)? RP;
 
-write: WR LP expr (',' expr)* RP;
+write: WR LP (expr | cond) (',' (expr | cond))* RP;
 read: READ LP ID RP;
 
 ass: ID IG expr;

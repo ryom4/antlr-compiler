@@ -13,13 +13,29 @@ class SaveProcess():
 
 
 class EvalVisitor(llullVisitor):
-    def __init__(self, symbols):
+    def __init__(self, symbols, procname="main", parameters=[]):
         self.mem = [{}]
         self.processes = symbols
+        self.procname = procname
+        self.parameters = parameters
 
     def visitRoot(self, ctx):
         l = list(ctx.getChildren())
-        self.visit(l[0])
+        # print(l[0].getText())
+        # self.visit(l[0])
+        newmem = {}
+
+        listParameters = (self.processes[self.procname].parameters)
+        i = 0
+
+        for param in listParameters:
+            if param != ',':
+                newmem[param] = self.parameters[i]
+                i += 1
+
+        self.mem.append(newmem)
+        self.visit(self.processes[self.procname].statements)
+        self.mem.pop()
 
     def visitInt(self, ctx):
         l = list(ctx.getChildren())
@@ -43,6 +59,9 @@ class EvalVisitor(llullVisitor):
 
     def visitVar(self, ctx):
         l = list(ctx.getChildren())
+        if l[0].getText() not in self.mem[-1]:
+            self.mem[-1][l[0].getText()] = 0
+
         return self.mem[-1][l[0].getText()]
 
     def visitString(self, ctx):
@@ -65,17 +84,35 @@ class EvalVisitor(llullVisitor):
         op = l[1].getText()
 
         if op == '<':
-            return self.visit(l[0]) < self.visit(l[2])
+            if self.visit(l[0]) < self.visit(l[2]):
+                return 1
+            else:
+                return 0
         elif op == '>':
-            return self.visit(l[0]) > self.visit(l[2])
+            if self.visit(l[0]) > self.visit(l[2]):
+                return 1
+            else:
+                return 0
         elif op == '==':
-            return self.visit(l[0]) == self.visit(l[2])
+            if self.visit(l[0]) == self.visit(l[2]):
+                return 1
+            else:
+                return 0
         elif op == '<>':
-            return self.visit(l[0]) != self.visit(l[2])
+            if self.visit(l[0]) != self.visit(l[2]):
+                return 1
+            else:
+                return 0
         elif op == '<=':
-            return self.visit(l[0]) <= self.visit(l[2])
+            if self.visit(l[0]) <= self.visit(l[2]):
+                return 1
+            else:
+                return 0
         elif op == '>=':
-            return self.visit(l[0]) >= self.visit(l[2])
+            if self.visit(l[0]) >= self.visit(l[2]):
+                return 1
+            else:
+                return 0
 
     def visitConditional(self, ctx):
         l = list(ctx.getChildren())
@@ -106,7 +143,6 @@ class EvalVisitor(llullVisitor):
         newmem = {}
         i = 2
 
-
         listParameters = (self.processes[procname].parameters)
 
         while l[i].getText() != ')':
@@ -131,7 +167,7 @@ class EvalVisitor(llullVisitor):
             print(self.visit(l[i]), end=" ")
             i += 2
 
-        print(end="\n") 
+        print(end="\n")
 
     def visitRead(self, ctx):
         l = list(ctx.getChildren())

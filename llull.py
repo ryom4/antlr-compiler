@@ -15,5 +15,9 @@ tree = parser.root()
 symbolsVisitor = SymbolsVisitor()
 symbols = symbolsVisitor.visit(tree)
 
-visitor = EvalVisitor(symbols)
-visitor.visit(tree)
+if len(sys.argv) == 2:
+    visitor = EvalVisitor(symbols)
+    visitor.visit(tree)
+else:
+    visitor = EvalVisitor(symbols, sys.argv[2], [int(param) for param in sys.argv[3:]])
+    visitor.visit(tree)
