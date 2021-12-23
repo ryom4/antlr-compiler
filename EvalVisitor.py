@@ -6,12 +6,6 @@ else:
     from llullVisitor import llullVisitor
 
 
-class SaveProcess():
-    def __init__(self, parameters, statements):
-        self.parameters = parameters
-        self.statements = statements
-
-
 class EvalVisitor(llullVisitor):
     def __init__(self, symbols, procname="main", parameters=[]):
         self.mem = [{}]
@@ -21,8 +15,6 @@ class EvalVisitor(llullVisitor):
 
     def visitRoot(self, ctx):
         l = list(ctx.getChildren())
-        # print(l[0].getText())
-        # self.visit(l[0])
         newmem = {}
 
         listParameters = (self.processes[self.procname].parameters)
@@ -56,6 +48,10 @@ class EvalVisitor(llullVisitor):
     def visitDiv(self, ctx):
         l = list(ctx.getChildren())
         return self.visit(l[0]) / self.visit(l[2])
+
+    def visitMod(self, ctx):
+        l = list(ctx.getChildren())
+        return self.visit(l[0]) % self.visit(l[2])
 
     def visitVar(self, ctx):
         l = list(ctx.getChildren())

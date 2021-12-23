@@ -37,8 +37,9 @@ cond:
 
 expr:
     LP expr RP       #parentesis 
-    | expr DIV expr    #div
+    | expr DIV expr  #div
     | expr MUL expr  #mul 
+    | expr MOD expr  #mod
     | expr RES expr  #res 
     | expr MES expr  #mes 
     | ID             #var 
@@ -65,6 +66,7 @@ MES: '+';
 RES: '-';
 MUL: '*';
 DIV: '/';
+MOD: '%';
 
 STRING: '"' ~[\n]* '"';
 

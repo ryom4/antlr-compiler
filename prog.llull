@@ -1,13 +1,12 @@
 void main() {
-    if(4 < 5){
-        write(1)
-    }
-    if(5<4){
-        write(2)
-    }
+    read(n)
+    hanoi(n, 1, 2, 3)
 }
-void proc(x) {
-    write("tus muertos")
-    write(x)
-    write(yx)
+
+void hanoi(n, ori, dst, aux) {
+    if (n > 0) {
+        hanoi(n - 1, ori, aux, dst)
+        write(ori, "->", dst)
+        hanoi(n - 1, aux, dst, ori)
+    }
 }

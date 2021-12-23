@@ -6,7 +6,6 @@ from EvalVisitor import EvalVisitor
 from SymbolsVisitor import SymbolsVisitor
 
 input_stream = FileStream(sys.argv[1])
-#input_stream = InputStream(input('? '))
 lexer = llullLexer(input_stream)
 token_stream = CommonTokenStream(lexer)
 parser = llullParser(token_stream)

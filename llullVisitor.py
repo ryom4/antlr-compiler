@@ -99,6 +99,11 @@ class llullVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by llullParser#mod.
+    def visitMod(self, ctx:llullParser.ModContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by llullParser#string.
     def visitString(self, ctx:llullParser.StringContext):
         return self.visitChildren(ctx)
