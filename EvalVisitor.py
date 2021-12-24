@@ -5,6 +5,9 @@ else:
     from llullParser import llullParser
     from llullVisitor import llullVisitor
 
+class llullExceptions(Exception):
+    def __init__(self, missatge):
+        self.missatge = missatge
 
 class EvalVisitor(llullVisitor):
     def __init__(self, symbols, procname="main", parameters=[]):
@@ -17,8 +20,14 @@ class EvalVisitor(llullVisitor):
         l = list(ctx.getChildren())
         newmem = {}
 
+        if self.procname not in self.processes:
+            raise llullExceptions("Error: nom de procediment incorrecte.")
+
         listParameters = (self.processes[self.procname].parameters)
         i = 0
+
+        if len(listParameters) != len(self.parameters):
+            raise llullExceptions("Error: nombre de paràmetres incorrectes.")
 
         for param in listParameters:
             if param != ',':
@@ -47,7 +56,13 @@ class EvalVisitor(llullVisitor):
 
     def visitDiv(self, ctx):
         l = list(ctx.getChildren())
-        return self.visit(l[0]) / self.visit(l[2])
+        dividend = self.visit(l[0])
+        divisor = self.visit(l[2])
+        
+        if divisor == 0:
+            raise llullExceptions("Error: divisió per zero.")
+        else:
+            return dividend / divisor
 
     def visitMod(self, ctx):
         l = list(ctx.getChildren())
@@ -68,8 +83,13 @@ class EvalVisitor(llullVisitor):
     def visitGet(self, ctx):
         l = list(ctx.getChildren())
         name = l[2].getText()
-        value = self.visit(l[4])
-        return self.mem[-1][name][value]
+        it = self.visit(l[4])
+        array = self.mem[-1][name]
+
+        if it < 0 or it >= len(array):
+            raise llullExceptions("Error: accés a índex inexistent d'una taula.")
+        else:
+            return self.mem[-1][name][it]
 
     def visitParentesis(self, ctx):
         l = list(ctx.getChildren())
@@ -139,15 +159,30 @@ class EvalVisitor(llullVisitor):
         newmem = {}
         i = 2
 
+        if procname not in self.processes:
+            raise llullExceptions("Error: crida a procediment no definit")
+
         listParameters = (self.processes[procname].parameters)
 
+        nparams = 0
+        j = 2
+        while  l[j].getText() != ')':
+            if l[j].getText() != ',':
+                nparams += 1
+            j += 1
+
+        if len(listParameters) != nparams:
+            raise llullExceptions("Error: nombre de paràmetres a crida incorrectes.")
+
+        k = 0
         while l[i].getText() != ')':
             if l[i].getText() != ',':
                 newparam = self.visit(l[i])
                 if isinstance(newparam, int):
-                    newmem[listParameters[i-2]] = newparam
+                    newmem[listParameters[k]] = newparam
                 else:
-                    newmem[listParameters[i-2]] = self.mem[-1][l[i].getText()]
+                    newmem[listParameters[k]] = self.mem[-1][l[i].getText()]
+                k += 1
 
             i += 1
 
@@ -171,7 +206,12 @@ class EvalVisitor(llullVisitor):
 
     def visitAss(self, ctx):
         l = list(ctx.getChildren())
-        self.mem[-1][l[0].getText()] = self.visit(l[2])
+        value = self.visit(l[2])
+
+        if isinstance(value, list):
+            self.mem[-1][l[0].getText()] = value.copy()
+        else:
+            self.mem[-1][l[0].getText()] = value
 
     def visitArray(self, ctx):
         l = list(ctx.getChildren())

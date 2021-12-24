@@ -59,7 +59,7 @@ IF: 'if';
 WR: 'write';
 VOID: 'void';
 
-INT: [0-9]+;
+INT: ('-')? [0-9]+;
 ID: [a-zA-Z]+ [1-9]* [a-zA-Z]*;
 
 MES: '+';

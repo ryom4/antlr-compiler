@@ -2,7 +2,7 @@ import sys
 from antlr4 import *
 from llullLexer import llullLexer
 from llullParser import llullParser
-from EvalVisitor import EvalVisitor
+from EvalVisitor import EvalVisitor, llullExceptions
 from SymbolsVisitor import SymbolsVisitor
 
 input_stream = FileStream(sys.argv[1])
@@ -12,11 +12,22 @@ parser = llullParser(token_stream)
 tree = parser.root()
 
 symbolsVisitor = SymbolsVisitor()
-symbols = symbolsVisitor.visit(tree)
+try:
+    symbols = symbolsVisitor.visit(tree)
+except llullExceptions as excpt:
+    print(excpt.missatge)
+    exit()
 
 if len(sys.argv) == 2:
     visitor = EvalVisitor(symbols)
-    visitor.visit(tree)
+    try:
+        visitor.visit(tree)
+    except llullExceptions as excpt:
+        print(excpt.missatge) 
 else:
     visitor = EvalVisitor(symbols, sys.argv[2], [int(param) for param in sys.argv[3:]])
-    visitor.visit(tree)
+    try:
+        visitor.visit(tree)
+    except llullExceptions as excpt:
+        print(excpt.missatge)
+    

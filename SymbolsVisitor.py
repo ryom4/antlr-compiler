@@ -5,6 +5,7 @@ else:
     from llullParser import llullParser
     from llullVisitor import llullVisitor
 
+from EvalVisitor import llullExceptions
 
 class SaveProcess():
     def __init__(self, parameters, statements):
@@ -28,8 +29,15 @@ class SymbolsVisitor(llullVisitor):
         statements = ctx.statements()
         i = 3
         parameters = []
+
+        if procname in self.processes:
+            raise llullExceptions("Error: repetició de procediment ja definit.")
+
         while l[i].getText() != ')':
-            parameters.append(l[i].getText())
+            if l[i].getText() != ',':
+                if l[i].getText() in parameters:
+                    raise llullExceptions("Error: nom de paràmetre a procediment repetit.")
+                parameters.append(l[i].getText())
             i += 1
 
         self.processes[procname] = SaveProcess(parameters, statements)
